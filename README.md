@@ -6,7 +6,7 @@ This package is composed of a shader and a custom material editor to tweak the e
 
  ![screenshot](http://i.imgur.com/zUxwa8S.png)
  
-Video the effect here: https://www.youtube.com/watch?v=aGiExnjwIBM
+Showcase of the effect here: https://www.youtube.com/watch?v=aGiExnjwIBM
  
 Material
 -------
@@ -18,7 +18,7 @@ It is a composition of multiples effects, you can toggle it directly from this i
  License
 -------
 
-Copyright (C) 2017 aduboc
+Copyright (C) 2017 Andy Duboc
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
