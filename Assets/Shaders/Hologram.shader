@@ -122,7 +122,7 @@
 				fixed4 rimColor = _RimColor * pow (rim, _RimPower);
 
 				fixed4 col = texColor * _MainColor + (glow * 0.35 * _MainColor) + rimColor;
-				col.a = _Alpha * (scan + rim + glow) * flicker;
+				col.a = texColor.a * _Alpha * (scan + rim + glow) * flicker;
 
 				col.rgb *= _Brightness;
 
