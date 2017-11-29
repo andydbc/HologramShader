@@ -1,9 +1,12 @@
 Hologram
 ==========
 
-Hologram is a simple shader made in Unity. This package is composed of a shader and a custom material editor to compose the effect. 
+Hologram is a simple shader made in Unity.<br>
+This package is composed of a shader and a custom material editor to tweak the effect. 
 
  ![screenshot](http://i.imgur.com/zUxwa8S.png)
+ 
+Showcase of the effect here: https://www.youtube.com/watch?v=aGiExnjwIBM
  
 Material
 -------
@@ -15,7 +18,7 @@ It is a composition of multiples effects, you can toggle it directly from this i
  License
 -------
 
-Copyright (C) 2015 aduboc
+Copyright (C) 2017 Andy Duboc
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
