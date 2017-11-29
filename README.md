@@ -13,7 +13,7 @@ Material
 
 It is a composition of multiples effects, you can toggle it directly from this inspector:
 
- ![screenshot](http://i.imgur.com/8AWSkCZ.png)
+ ![screenshot](https://i.imgur.com/utzpD1X.gif)
 
  License
 -------
