@@ -6,8 +6,6 @@ This package is composed of a shader and a custom material editor to tweak the e
 
  ![screenshot](Screenshots/screen00.gif)
  
-Showcase of the effect here: https://www.youtube.com/watch?v=aGiExnjwIBM
- 
 Material
 -------
 
