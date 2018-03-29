@@ -1,4 +1,4 @@
-Hologram
+Hologram [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
 ==========
 
 Hologram is a simple shader made in Unity.<br>
