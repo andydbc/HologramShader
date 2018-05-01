@@ -5,6 +5,7 @@
 		// General
 		_Brightness("Brightness", Range(0.1, 6.0)) = 3.0
 		_Alpha ("Alpha", Range (0.0, 1.0)) = 1.0
+		_Direction ("Direction", Vector) = (0,1,0,0)
 		// Main Color
 		_MainTex ("MainTexture", 2D) = "white" {}
 		_MainColor ("MainColor", Color) = (1,1,1,1)
@@ -64,6 +65,7 @@
 
 			sampler2D _MainTex;
 			sampler2D _FlickerTex;
+			float4 _Direction;
 			float4 _MainTex_ST;
 			float4 _MainColor;
 			float4 _RimColor;
@@ -102,16 +104,18 @@
 			{
 				fixed4 texColor = tex2D(_MainTex, i.uv);
 
+				half dirVertex = (dot(i.worldVertex, normalize(float4(_Direction.xyz, 1.0))) + 1) / 2;
+
 				// Scanlines
 				float scan = 0.0;
 				#ifdef _SCAN_ON
-					scan = step(frac(i.worldVertex.y * _ScanTiling + _Time.w * _ScanSpeed), 0.5) * 0.65;
+					scan = step(frac(dirVertex * _ScanTiling + _Time.w * _ScanSpeed), 0.5) * 0.65;
 				#endif
 
 				// Glow
 				float glow = 0.0;
 				#ifdef _GLOW_ON
-					glow = frac(i.worldVertex.y * _GlowTiling - _Time.x * _GlowSpeed);
+					glow = frac(dirVertex * _GlowTiling - _Time.x * _GlowSpeed);
 				#endif
 
 				// Flicker

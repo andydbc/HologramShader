@@ -16,6 +16,7 @@ public class HologramShaderGUI : ShaderGUI
     private MaterialProperty AlbedoColor = null;
     private MaterialProperty Brightness = null;
     private MaterialProperty Alpha = null;
+    private MaterialProperty Direction = null;
 
     // Rim
     private MaterialProperty RimColor = null;
@@ -55,6 +56,7 @@ public class HologramShaderGUI : ShaderGUI
         AlbedoColor = FindProperty("_MainColor", _props);
         Brightness = FindProperty("_Brightness", _props);
         Alpha = FindProperty("_Alpha", _props);
+        Direction = FindProperty("_Direction", _props);
 
         RimColor = FindProperty("_RimColor", _props);
         RimPower = FindProperty("_RimPower", _props);
@@ -151,6 +153,7 @@ public class HologramShaderGUI : ShaderGUI
 
         if (Layout.BeginFold((int)Category.Effects, "- Effects -"))
         {
+            DrawGeneralEffect();
             DrawRimSettings();
             DrawScanlinesSettings();
             DrawGlowSettings();
@@ -158,6 +161,18 @@ public class HologramShaderGUI : ShaderGUI
             DrawFlickerSettings();
         }
         Layout.EndFold();
+    }
+
+    void DrawGeneralEffect()
+    {
+        GUILayout.Space(-3);
+        GUILayout.Label("General", EditorStyles.boldLabel);
+        EditorGUI.indentLevel++;
+        var ofs = EditorGUIUtility.labelWidth;
+        _materialEditor.SetDefaultGUIWidths();
+        _materialEditor.ShaderProperty(Direction, "Direction");
+        EditorGUIUtility.labelWidth = ofs;
+        EditorGUI.indentLevel--;
     }
 
     void DrawGeneralSettings()
