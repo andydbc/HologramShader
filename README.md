@@ -16,4 +16,5 @@ It is a composition of multiples effects, you can toggle it directly from this i
  License
 -------
 
-MIT, see [LICENSE](LICENSE) for details.
+MIT, see [LICENSE](LICENSE) for 
+details.
